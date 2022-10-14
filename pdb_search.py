@@ -49,7 +49,7 @@ def block_to_mol(b: gemmi.cif.Block, exclude_leaving_atoms=False) -> Chem.Mol:
         atom.SetIsotope(isotope)
         atom.SetIsAromatic(a == 'Y')
         atom.SetFormalCharge(int(c))
-        atom.SetNoImplicit(True)
+        # atom.SetNoImplicit(True)
         atom.SetChiralTag(atom_chiralities[s])
         mol.AddAtom(atom)
 
